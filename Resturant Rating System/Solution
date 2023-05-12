@@ -1,0 +1,55 @@
+class User {
+  String name;
+  String email;
+  String password;
+}
+
+class Rating {
+  int restaurantId;
+  int userId;
+  int rating;
+  String dishName;
+  String ratingDescription;
+}
+
+class Restaurant {
+  int id;
+  String name;
+  List<Rating> ratings = new ArrayList<>();
+  
+  float getAverageRating() {
+    // calculate average rating based on ratings list
+    // return the average rating
+  }
+}
+
+class RestaurantRatingSystem {
+  List<User> users = new ArrayList<>();
+  List<Restaurant> restaurants = new ArrayList<>();
+  
+  void registerUser(User user) {
+    // add user to users list
+  }
+  
+  void rateRestaurant(int restaurantId, int userId, int rating, String dishName, String ratingDescription) {
+    // check if the user has already rated the restaurant
+    // if yes, update the rating and rating description
+    // if not, create a new rating object and add it to the restaurant's ratings list
+  }
+  
+  List<Rating> filterAndSortRatings(int restaurantId, int lowerRange, int higherRange, boolean ascendingOrder) {
+    // filter ratings based on restaurantId, lowerRange and higherRange
+    // sort ratings based on rating and ascendingOrder flag
+    // return the sorted and filtered ratings list
+  }
+  
+  List<Restaurant> getRestaurantsSortedByRating() {
+    // sort restaurants based on average rating in descending order
+    // return the sorted restaurants list
+  }
+  
+  void describeRestaurant(int restaurantId) {
+    // find restaurant with the given id
+    // print restaurant name and average rating
+  }
+}
